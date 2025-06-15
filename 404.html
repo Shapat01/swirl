@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="laptop-favicon.svg" type="image/svg+xml">
+    <style>        .error-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            line-height: 1;
+            position: relative;
+            display: inline-block;
+        }
+        .error-code:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background-color: rgba(255, 107, 107, 0.3);
+            bottom: 15px;
+            left: 0;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        .error-message {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        .error-illustration {
+            font-size: 5rem;
+            margin: 2rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        .error-description {
+            margin-bottom: 2rem;
+        }
+        .home-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+        }
+        .home-button:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+        }
+        .card-stack-animation {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 3rem auto;
+        }
+        .animated-card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform-origin: center bottom;
+            transition: transform 0.5s ease;
+        }
+        .animated-card:nth-child(1) {
+            background-color: #ff6b6b;
+            transform: translateY(0) rotate(-5deg);
+            z-index: 3;
+        }
+        .animated-card:nth-child(2) {
+            background-color: #4ecdc4;
+            transform: translateY(-10px) rotate(3deg);
+            z-index: 2;
+        }
+        .animated-card:nth-child(3) {
+            background-color: #ffbe0b;
+            transform: translateY(-20px) rotate(-2deg);
+            z-index: 1;
+        }
+        .card-stack-animation:hover .animated-card:nth-child(1) {
+            transform: translateY(30px) rotate(-8deg);
+        }
+        .card-stack-animation:hover .animated-card:nth-child(2) {
+            transform: translateY(-20px) rotate(6deg);
+        }
+        .card-stack-animation:hover .animated-card:nth-child(3) {
+            transform: translateY(-40px) rotate(-4deg);
+        }</style>
+</head>
+<body>
+    <div id="portfolio-wrapper">
+        <header class="main-header">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="error-container">
+                <div class="error-code">404</div>
+                <div class="error-message">Page Not Found</div>
+                <div class="card-stack-animation">
+                    <div class="animated-card"></div>
+                    <div class="animated-card"></div>
+                    <div class="animated-card"></div>
+                </div>
+        </main>
+        <footer class="main-footer">
+            <p>Digital Craftsman & Creative Developer</p>
+            <p><a href="404.html">Surprise</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
